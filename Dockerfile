@@ -5,7 +5,7 @@ ENV RACK_ENV production
 ENV RAILS_ENV production
 # Custom packages - PH
 USER root
-RUN yum install -y coreutils nfs-utils \
+RUN yum install -y nfs-utils ; \
     mkdir /ruby-page
 USER default
 COPY . /opt/app-root/src/
