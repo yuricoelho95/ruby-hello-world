@@ -7,7 +7,7 @@ ENV RAILS_ENV production
 USER root
 RUN yum install -y nfs-utils ; \
     mkdir /ruby-page ; \
-    curl -o /opt/app-root/src/ "https://www.redhat.com/sysadmin/sites/default/files/styles/embed_large/public/2019-09/Anbile-Tower-strategy.png" ;
+    curl -o /opt/app-root/src/Anbile-Tower-strategy.png "https://www.redhat.com/sysadmin/sites/default/files/styles/embed_large/public/2019-09/Anbile-Tower-strategy.png" ;
 USER default
 COPY . /opt/app-root/src/
 RUN scl enable rh-ruby22 "bundle install"
